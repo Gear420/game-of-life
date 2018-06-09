@@ -6,9 +6,10 @@ import time
 #
 # def autoclose():
 #
-
-cellGraph = Graph(20)
+size = input("请输入size大小:")
+size =(int)(size)
+cellGraph = Graph(size)
 root = Tk()
 root.title("draw")
-cellSet(cellGraph, root)
+cellSet(cellGraph,size,root)
 root.mainloop()
