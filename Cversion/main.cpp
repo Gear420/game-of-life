@@ -18,6 +18,7 @@ int main(){
     Graph *g;
     if(f=='Y')
     {
+        cout<<"输入0/1"<<endl;
         g = new Graph(size,f);
     }
     else
