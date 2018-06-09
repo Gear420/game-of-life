@@ -3,17 +3,22 @@
 //
 
 #include <iostream>
-#include <stdlib.h>
 #include "graph.h"
-#include <time.h>
+#include <unistd.h>
+#include <stdlib.h>
 using namespace std;
 
 int main(){
-    Graph *g = new Graph(20);
-    g->print();
-    cout<<"****************************"<<endl;
-    g->change_status();
-    g->print();
+    Graph *g = new Graph(10);
+    int t=100;
+    while(t--)
+    {
+        g->print();
+        g->change_status();
+        sleep(1);
+        system("clear");
+    }
+
 
 }
 

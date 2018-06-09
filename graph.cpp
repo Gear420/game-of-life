@@ -34,7 +34,7 @@ void Graph::count_neighbour() {
                 {
                     if(j+jj<0||j+jj>=size)
                         continue;
-                    if(ii==i&&jj==j)
+                    if(ii+i==i&&jj+j==j)
                         continue;
                     if(graph[i+ii][j+jj]==1)
                         cnt++;
@@ -51,6 +51,7 @@ void Graph::count_neighbour() {
             else
                 graph_status[i][j] = 0;
         }
+
     }
 }
 
@@ -58,6 +59,7 @@ void Graph::change_status() {
 
 
     count_neighbour();
+
     for(int i = 0; i<size ;i++)
     {
         for(int j =0 ;j<size ;j++)
