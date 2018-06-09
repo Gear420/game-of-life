@@ -15,20 +15,13 @@ private:
     int size;
     vector<vector<int> > graph;
     //int graph[][];
-    //vector<vector<int> > graph_status;
+    vector<vector<int> > graph_status;
 public:
-    Graph(int size){
-        this->size = size;
-        srand((unsigned)time(NULL));
-        for(int i =0 ;i<this->size;i++) {
-            vector<int> a;
-            for (int j = 0; j < this->size; j++) {
-                a.push_back(rand() % 2);
-            }
-            graph.push_back(a);
-        }
+    Graph(int size);
+    void count_neighbour();
+    void change_status();
 
-    }
+
     void print(){
         for(int i =0 ;i<this->size;i++)
         {
