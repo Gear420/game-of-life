@@ -18,22 +18,10 @@ private:
     vector<vector<int> > graph_status;
 public:
     Graph(int size);
+    Graph(int size, char f);
     void count_neighbour();
     void change_status();
-
-
-    void print(){
-        for(int i =0 ;i<this->size;i++)
-        {
-            for(int j =0; j<this->size;j++)
-            {
-                cout << graph[i][j] << ' ';
-            }
-            cout << endl;
-        }
-    }
-
-
+    void print();
 };
 
 #endif //GAME_OF_LIFE_GRAPH_H

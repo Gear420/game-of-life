@@ -9,9 +9,21 @@
 using namespace std;
 
 int main(){
-    Graph *g = new Graph(10);
-    int t=100;
-    while(t--)
+    int size;//图形大小
+    cout << "请输入图形大小 ：";
+    cin>>size;
+    char f ;
+    cout<<"是否手动输入Y/N :";
+    cin>>f;
+    Graph *g;
+    if(f=='Y')
+    {
+        g = new Graph(size,f);
+    }
+    else
+        g = new Graph(size);
+
+    while(1)
     {
         g->print();
         g->change_status();

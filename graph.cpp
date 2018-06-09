@@ -19,6 +19,24 @@ Graph::Graph(int size) {
         graph_status.push_back(b);
     }
 }
+Graph::Graph(int size,char f) {
+    this->size = size;
+    srand((unsigned)time(NULL));
+    for(int i =0 ;i<this->size;i++) {
+        vector<int> a;
+        vector<int> b;
+        for (int j = 0; j < this->size; j++) {
+            int num;
+            cin>>num;
+            a.push_back(num);
+            b.push_back(0);
+        }
+        graph.push_back(a);
+        graph_status.push_back(b);
+    }
+}
+
+
 void Graph::count_neighbour() {
 
     for(int i =0 ;i<size;i++)
@@ -66,5 +84,18 @@ void Graph::change_status() {
         {
             graph[i][j] = graph_status[i][j];
         }
+    }
+}
+void Graph::print(){
+    for(int i =0 ;i<size;i++)
+    {
+        for(int j =0; j<size;j++)
+        {
+            if(graph[i][j]==1)
+                cout<<'*';
+            else
+                cout<<' ';
+        }
+        cout << endl;
     }
 }
